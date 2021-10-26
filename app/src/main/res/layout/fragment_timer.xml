@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/colorWhite"
+    android:background="@color/colorGray"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_above="@id/linear_layout_buttons"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear_layout_buttons">
+
         <ProgressBar
             android:id="@+id/progress_bar_timer"
-            android:progress="100"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_centerInParent="true"
-            android:progressDrawable="@drawable/circle_progress_bar"
             android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:progress="100"
+            android:progressDrawable="@drawable/circle_progress_bar" />
+
         <TextView
             android:id="@+id/text_timer"
-            android:textColor="@color/colorAccent"
-            android:textSize="40sp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="@string/text_timer_default_time"
-            android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp" />
     </RelativeLayout>
 
     <include layout="@layout/partial_line" />
